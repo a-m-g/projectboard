@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * 
  * @author andrew
- *
+ * Application launch
  */
 @SpringBootApplication
 public class ProjectboardApplication {
