@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "ee9451d5-e25e-466e-bd9e-cbe6ca3aacf1",
+		"name": "ProjectBoradTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Success- add summary task - localhost:8080/api/board",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"summary\":\"new summary task - 4\",\n\t\"acceptanceCriteria\":\"create project board\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/board",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"board"
+					]
+				},
+				"description": "Successful creation of new summary task"
+			},
+			"response": []
+		},
+		{
+			"name": "Success Update - localhost:8080/api/board",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"summary\":\"new summary task - 1 - update\",\n\t\"acceptanceCriteria\":\"create project board\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/board",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"board"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Failure - add summary task - localhost:8080/api/board",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"acceptanceCriteria\":\"create project board\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/board",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"board"
+					]
+				},
+				"description": "Failure - add summary task"
+			},
+			"response": []
+		},
+		{
+			"name": "Get ALL - localhost:8080/api/board/all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"summary\":\"new summary task - 4\",\n\t\"acceptanceCriteria\":\"create project board\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/board/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"board",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Id - localhost:8080/api/board/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/board/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"board",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete - localhost:8080/api/board/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/board/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"board",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
